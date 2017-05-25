@@ -15,7 +15,7 @@ Previous releases of Marlin include [1.0.2-2](https://github.com/MarlinFirmware/
 
 ## Geeetech Prusa I3 X
 
-<img align="top" width=230 src="buildroot/share/pixmaps/prusa/prusa-i3-x.jpg" />
+<!-- <img align="top" width=230 src="buildroot/share/pixmaps/prusa/prusa-i3-x.jpg" /> -->
 
 This fork is optimized for the Geeetech Prusa I3 X. Additional information can be found at [Geeetech Prusa I3 X](http://www.geeetech.com/wiki/index.php/Prusa_I3_X).
 
@@ -29,7 +29,6 @@ This fork is optimized for the Geeetech Prusa I3 X. Additional information can b
     $ (env) pip install -U platformio
     $ (env) git clone https://github.com/alexstrassheim/Marlin.git
     $ (env) cd Marlin/Marlin
-    $ (env) git checkout AutoLeveling
 
 Connect printer with USB and run:
 
@@ -39,7 +38,7 @@ Connect printer with USB and run:
 ## Auto Bed Leveling Upgrade for Geeetech Prusa I3 X
 
 
-<img align="top" width=175 src="./buildroot/share/pixmaps/leveling/cap_sensor.jpg" />
+<!-- <img align="top" width=175 src="./buildroot/share/pixmaps/leveling/cap_sensor.jpg" /> -->
 
 
 <!-- [3D-Proto](http://www.3d-proto.de/index.php?p=tips_autobed) -->
