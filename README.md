@@ -13,6 +13,57 @@ This Release branch contains the latest tagged version of Marlin (currently 1.1.
 
 Previous releases of Marlin include [1.0.2-2](https://github.com/MarlinFirmware/Marlin/tree/1.0.2-2) (December 2016) and [1.0.1](https://github.com/MarlinFirmware/Marlin/tree/1.0.1) (December 2014). Any version of Marlin prior to 1.0.1 (when we started tagging versions) can be collectively referred to as Marlin 1.0.0.
 
+## Geeetech Prusa I3 X
+
+<img align="top" width=230 src="buildroot/share/pixmaps/prusa/prusa-i3-x.jpg" />
+
+This fork is optimized for the Geeetech Prusa I3 X. Additional information can be found at [Geeetech Prusa I3 X](http://www.geeetech.com/wiki/index.php/Prusa_I3_X).
+
+## Upgrade Firmware With PlatformIO
+    $ virtualenv2 env
+    New python executable in /home/alex/tmp/env/bin/python2
+    Also creating executable in /home/alex/tmp/env/bin/python
+    Installing setuptools, pip, wheel...done.
+    $ cd env
+    $ source bin/activate
+    $ (env) pip install -U platformio
+    $ (env) git clone https://github.com/alexstrassheim/Marlin.git
+    $ (env) cd Marlin/Marlin
+    $ (env) git checkout AutoLeveling
+
+Connect printer with USB and run:
+
+    $ (env) platformio run -t upload
+
+
+## Auto Bed Leveling Upgrade for Geeetech Prusa I3 X
+
+
+<img align="top" width=175 src="./buildroot/share/pixmaps/leveling/cap_sensor.jpg" />
+
+
+<!-- [3D-Proto](http://www.3d-proto.de/index.php?p=tips_autobed) -->
+
+<!-- [Bastel & Reparatur Blog - thesen](https://blog.thesen.eu/prusa-geeetech-ix3-pro-gt2560-board-mit-autoleveling-nachruesten/) -->
+
+[Thingiverse -- Auto leveling probe holder](http://www.thingiverse.com/thing:1520340)
+
+### Assembly
+
+capacitive sensor
+
+### Auto Bed Leveling Setting 
+
+```
+G28
+G92Z10
+M114
+
+Calculate: Z-Offset = 10-6-'M114 Z-HEIGHT'
+```
+
+
+
 ## Contributing to Marlin
 
 Click on the [Issue Queue](https://github.com/MarlinFirmware/Marlin/issues) and [Pull Requests](https://github.com/MarlinFirmware/Marlin/pulls) links above at any time to see what we're currently working on.
